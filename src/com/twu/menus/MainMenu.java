@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
  * Created by tlourenzo on 28-07-2017.
  */
-public final class MainMenu {
+public class MainMenu {
 
     private Inventory inventory;
     private Scanner input;
@@ -21,15 +21,6 @@ public final class MainMenu {
     private ReturnMenu returnMenu;
     private DisplayMessages display;
     private boolean exit;
-
-    private final static MainMenu INSTANCE = new MainMenu();
-
-    private MainMenu() {
-    }
-
-    public static MainMenu getInstance(){
-        return INSTANCE;
-    }
 
     public void run(Inventory inventory, InputStream inputStream, PrintStream outputStream,
                     DisplayMessages displayMessages, CheckoutMenu checkoutMenu, ReturnMenu returnMenu) {
@@ -42,22 +33,20 @@ public final class MainMenu {
         init();
     }
 
-    public void init() {
+    private void init() {
         output.print(display.welcomeMessage());
         do {
             output.print(display.mainMenuMessage());
             output.print(display.optionsMessage());
-            if(input.hasNext()){
-                if(input.next().matches("\\d+")){
-                    mainMenuOption(input.nextInt());
-                }else{
-                    output.print(display.incorrectInputMessage());
-                }
+            if(input.hasNextInt()){
+                mainMenuOption(input.nextInt());
+            }else{
+                output.print(display.incorrectInputMessage());
             }
         }while(!exit);
     }
 
-    public void mainMenuOption(int inputOption) {
+    private void mainMenuOption(int inputOption) {
         switch (inputOption){
             case 1:
                 output.print(display.bookListingMessage());

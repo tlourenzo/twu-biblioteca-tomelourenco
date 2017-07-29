@@ -5,27 +5,20 @@ import com.twu.inventory.Inventory;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
 
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
  * Created by tlourenzo on 28-07-2017.
  */
-public final class CheckoutMenu {
+public class CheckoutMenu {
 
-    private final static CheckoutMenu INSTANCE = new CheckoutMenu();
     private Inventory inventory;
     private DisplayMessages display;
     private Scanner input;
     private PrintStream output;
     private boolean back;
-
-    private CheckoutMenu() {
-    }
-
-    public static CheckoutMenu getInstance() {
-        return INSTANCE;
-    }
 
     public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output){
         this.inventory = inventory;

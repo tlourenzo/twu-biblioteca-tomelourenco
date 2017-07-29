@@ -12,9 +12,9 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
-        MainMenu mainMenu = MainMenu.getInstance();
-        CheckoutMenu checkoutMenu = CheckoutMenu.getInstance();
-        ReturnMenu returnMenu = ReturnMenu.getInstance();
+        MainMenu mainMenu = new MainMenu();
+        CheckoutMenu checkoutMenu = new CheckoutMenu();
+        ReturnMenu returnMenu = new ReturnMenu();
         DisplayMessages displayMessages = DisplayMessages.getInstance();
 
         mainMenu.run(inventory, System.in, System.out, displayMessages, checkoutMenu, returnMenu);

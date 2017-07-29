@@ -25,11 +25,11 @@ public class MainMenuTest {
 
     @Before
     public void setUp() throws UnsupportedEncodingException {
-        mainMenu = MainMenu.getInstance();
+        mainMenu = new MainMenu();
         display = DisplayMessages.getInstance();
         inventory = new MockInventory();
-        checkoutMenu = CheckoutMenu.getInstance();
-        returnMenu = ReturnMenu.getInstance();
+        checkoutMenu = new MockCheckoutMenu();
+        returnMenu = new MockReturnMenu();
     }
 
     @Test
@@ -95,6 +95,11 @@ public class MainMenuTest {
         }
     }
 
+    private class MockCheckoutMenu extends CheckoutMenu {
+    }
+
+    private class MockReturnMenu extends ReturnMenu {
+    }
 }
 
 

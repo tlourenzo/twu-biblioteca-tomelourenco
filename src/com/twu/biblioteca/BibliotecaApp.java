@@ -7,7 +7,7 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
-        MainMenu mainMenu = new MainMenu(inventory);
-        mainMenu.launch();
+        MainMenu mainMenu = MainMenu.getInstance();
+        mainMenu.run(inventory);
     }
 }

@@ -33,7 +33,7 @@ public class Inventory {
         return queryResult;
     }
 
-    public List<Book> getRentedBooksList(){
+    public List<Book> getCheckedOutBooksList(){
         List<Book> queryResult = new ArrayList<Book>();
         for(Book book : books){
             if(rentedBooks.contains(book)){

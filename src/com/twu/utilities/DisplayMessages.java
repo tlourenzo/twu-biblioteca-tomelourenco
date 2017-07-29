@@ -18,7 +18,7 @@ public final class DisplayMessages {
     }
 
     public String mainMenuMessage(){
-        return "Enter one of the following available options:\n"+
+        return "Available options:\n"+
                 "1 - List available books in inventory\n"+
                 "2 - Checkout Book\n"+
                 "3 - Return Book\n"+
@@ -26,7 +26,7 @@ public final class DisplayMessages {
     }
 
     public String optionsMessage(){
-        return "Enter one of the following available options:\n";
+        return "Select your request by using the corresponding number:\n";
     }
 
     public String bookListingMessage(){
@@ -36,15 +36,15 @@ public final class DisplayMessages {
     }
 
     public String incorrectInputMessage(){
-        return "Please select a valid option.";
+        return "Please select a valid option.\n\n";
     }
 
     public String incorrectBookReturnMessage(){
-        return "No books to be returned.";
+        return "No books to be returned.\n\n";
     }
 
     public String incorrectCheckoutMessage(){
-        return "No available books to checkout.";
+        return "No available books to checkout.\n\n";
     }
 
     public String exitMessage(){
@@ -52,15 +52,19 @@ public final class DisplayMessages {
     }
 
     public String successCheckoutMessage(){
-        return "Thank you for checking out your book! Enjoy!" ;
+        return "Thank you for checking your book out! Enjoy ";
     }
 
     public String successReturnMessage(){
-        return "Thank you for returning your book. Hope you have enjoyed reading it!";
+        return "Thank you for returning your book. We hope you have enjoyed reading ";
     }
 
     public String checkoutMessage(){
-        return "Please select your book by is Book ID or press 0 to return to main Menu.";
+        return "Please select the book to checkout by Book ID or press 0 to return to main Menu:\n\n";
+    }
+
+    public String returnMessage(){
+        return "Please select the returning book by Book ID or press 0 to return to main Menu:\n\n";
     }
 
 }

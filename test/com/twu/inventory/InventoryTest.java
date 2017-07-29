@@ -24,4 +24,25 @@ public class InventoryTest {
         assertEquals(BOOK_1, inventory.getBookList().get(0));
         assertEquals(BOOK_2, inventory.getBookList().get(1));
     }
+    @Test
+    public void testListsSize(){
+        assertEquals(inventory.getBookList().size(), inventory.getAvailableBooksList().size()+inventory.getCheckedOutBooksList().size());
+    }
+
+    @Test
+    public void testCheckOutBook(){
+        Book bookToCheckout = inventory.getAvailableBooksList().get(0);
+        inventory.checkoutBook(bookToCheckout);
+        assertFalse(inventory.getAvailableBooksList().contains(bookToCheckout));
+        assertTrue(inventory.getCheckedOutBooksList().contains(bookToCheckout));
+    }
+
+    @Test
+    public void testReturnBook(){
+        Book bookToReturn = inventory.getAvailableBooksList().get(0);
+        inventory.checkoutBook(bookToReturn);
+        assertFalse(inventory.getAvailableBooksList().contains(bookToReturn));
+        inventory.returnBook(bookToReturn);
+        assertTrue(inventory.getAvailableBooksList().contains(bookToReturn));
+    }
 }

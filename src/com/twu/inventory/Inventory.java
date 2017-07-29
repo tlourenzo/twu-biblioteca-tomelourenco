@@ -46,4 +46,12 @@ public class Inventory {
     public List<Book> getBookList(){
         return Collections.unmodifiableList(books);
     }
+
+    public void checkoutBook(Book bookToCheckout) {
+        rentedBooks.add(bookToCheckout);
+    }
+
+    public void returnBook(Book bookToReturn){
+        rentedBooks.remove(bookToReturn);
+    }
 }

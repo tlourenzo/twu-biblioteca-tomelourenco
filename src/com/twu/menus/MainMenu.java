@@ -17,9 +17,9 @@ public final class MainMenu {
     private Inventory inventory;
     private Scanner input;
     private PrintStream output;
-    private CheckoutMenu checkoutMenu = CheckoutMenu.getInstance();
-    private ReturnMenu returnMenu = ReturnMenu.getInstance();
-    private DisplayMessages display = DisplayMessages.getInstance();
+    private CheckoutMenu checkoutMenu;
+    private ReturnMenu returnMenu;
+    private DisplayMessages display;
     private boolean exit;
 
     private final static MainMenu INSTANCE = new MainMenu();
@@ -31,25 +31,33 @@ public final class MainMenu {
         return INSTANCE;
     }
 
-    public void run(Inventory inventory) {
+    public void run(Inventory inventory, InputStream inputStream, PrintStream outputStream,
+                    DisplayMessages displayMessages, CheckoutMenu checkoutMenu, ReturnMenu returnMenu) {
         this.inventory = inventory;
-        input = new Scanner(System.in);
-        output = System.out;
+        this.input = new Scanner(inputStream);
+        this.output = outputStream;
+        this.display = displayMessages;
+        this.checkoutMenu = checkoutMenu;
+        this.returnMenu = returnMenu;
         init();
     }
 
-    private void init() {
+    public void init() {
         output.print(display.welcomeMessage());
         do {
             output.print(display.mainMenuMessage());
             output.print(display.optionsMessage());
             if(input.hasNext()){
-                mainMenuOption(input.nextInt());
+                if(input.next().matches("\\d+")){
+                    mainMenuOption(input.nextInt());
+                }else{
+                    output.print(display.incorrectInputMessage());
+                }
             }
         }while(!exit);
     }
 
-    private void mainMenuOption(int inputOption) {
+    public void mainMenuOption(int inputOption) {
         switch (inputOption){
             case 1:
                 output.print(display.bookListingMessage());

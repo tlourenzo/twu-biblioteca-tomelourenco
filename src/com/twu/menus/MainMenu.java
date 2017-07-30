@@ -6,11 +6,10 @@
 
 package com.twu.menus;
 
-import com.twu.inventory.Inventory;
+import com.twu.database.Inventory;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -31,7 +30,7 @@ public class MainMenu {
 
     /**
      * Starting point of the entire program, as the main menu, this method receives all necessary streams to display and
-     * receive user input, as well as display messages, and the existing inventory.
+     * receive user input, as well as display messages, and the existing database.
      * Uses an aux method init() to start displaying choices.
      *
      * @param inventory

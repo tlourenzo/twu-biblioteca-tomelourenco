@@ -6,11 +6,10 @@
 package com.twu.menus;
 
 import com.twu.book.Book;
-import com.twu.inventory.Inventory;
+import com.twu.database.Inventory;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
 
-import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class CheckoutMenu {
 
     /**
      * Method to start the console display of the checkout menu selection,
-     * it receives all necessary streams and inventory to work with, as
+     * it receives all necessary streams and database to work with, as
      * well as all available messages to be displayed. Ir runs an aux method start();
      * @param inventory
      * @param display
@@ -66,7 +65,7 @@ public class CheckoutMenu {
 
 
     /**
-     * Receiving a right option, this method will invoke the checkout method from the inventory.
+     * Receiving a right option, this method will invoke the checkout method from the database.
      * @param selectOption
      */
     private void checkoutMenuOption(int selectOption) {

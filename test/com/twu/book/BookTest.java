@@ -5,7 +5,7 @@
 
 package com.twu.book;
 
-import com.twu.inventory.Inventory;
+import com.twu.database.Inventory;
 import org.junit.Before;
 import org.junit.Test;
 

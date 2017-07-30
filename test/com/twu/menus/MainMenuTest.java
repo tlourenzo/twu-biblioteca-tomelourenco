@@ -5,7 +5,7 @@
 package com.twu.menus;
 
 import com.twu.book.Book;
-import com.twu.inventory.Inventory;
+import com.twu.database.Inventory;
 import com.twu.utilities.DisplayMessages;
 import org.junit.Before;
 import org.junit.Test;
@@ -65,7 +65,7 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -75,7 +75,7 @@ public class MainMenuTest {
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -85,7 +85,7 @@ public class MainMenuTest {
                 "Checkout Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -95,7 +95,7 @@ public class MainMenuTest {
                 "Return Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -116,7 +116,7 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -124,7 +124,7 @@ public class MainMenuTest {
                 "Please select a valid option.\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -158,7 +158,7 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -168,7 +168,7 @@ public class MainMenuTest {
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -196,7 +196,7 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -206,7 +206,7 @@ public class MainMenuTest {
                 "Checkout Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -233,7 +233,7 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -243,7 +243,7 @@ public class MainMenuTest {
                 "Return Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
@@ -264,7 +264,7 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in inventory\n" +
+                "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "0 - Quit\n" +

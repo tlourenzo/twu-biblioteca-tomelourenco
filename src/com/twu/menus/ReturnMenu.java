@@ -8,11 +8,10 @@ package com.twu.menus;
 
 
 import com.twu.book.Book;
-import com.twu.inventory.Inventory;
+import com.twu.database.Inventory;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
 
-import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
@@ -30,7 +29,7 @@ public class ReturnMenu {
 
     /**
      * Method to start the console display of the return menu selection,
-     * it receives all necessary streams and inventory to work with, as
+     * it receives all necessary streams and database to work with, as
      * well as all available messages to be displayed. Ir runs an aux method start();
      * @param inventory
      * @param display
@@ -67,7 +66,7 @@ public class ReturnMenu {
     }
 
     /**
-     * Receiving a right option, this method will invoke the return method from the inventory.
+     * Receiving a right option, this method will invoke the return method from the database.
      * @param selectOption
      */
     private void returnMenuOption(int selectOption) {

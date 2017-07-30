@@ -3,8 +3,13 @@
  * v.1.0
  */
 
+/*
+ * Created by Tome Lourenco for TWU 101
+ * v.1.0
+ */
 
-package com.twu.inventory;
+
+package com.twu.database;
 
 import com.twu.book.Book;
 import java.util.*;
@@ -19,7 +24,7 @@ public class Inventory {
     private List<Book> rentedBooks = new ArrayList<Book>();
 
     /**
-     * Entity that is responsible for maintain books inventory
+     * Entity that is responsible for maintain books database
      */
     public Inventory() {
         this.createBooklist();
@@ -66,7 +71,7 @@ public class Inventory {
 
 
     /**
-     * Method to check all books in inventory.
+     * Method to check all books in database.
      * @return a full books list
      */
     public List<Book> getBookList(){

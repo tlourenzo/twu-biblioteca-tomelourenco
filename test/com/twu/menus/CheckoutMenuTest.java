@@ -6,7 +6,7 @@
 package com.twu.menus;
 
 import com.twu.book.Book;
-import com.twu.inventory.Inventory;
+import com.twu.database.Inventory;
 import com.twu.utilities.DisplayMessages;
 import org.junit.Before;
 import org.junit.Test;

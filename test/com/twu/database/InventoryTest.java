@@ -3,7 +3,7 @@
  * v.1.0
  */
 
-package com.twu.inventory;
+package com.twu.database;
 
 import com.twu.book.Book;
 import org.junit.Before;

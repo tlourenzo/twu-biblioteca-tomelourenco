@@ -31,7 +31,7 @@ public final class DisplayMessages {
 
     public String mainMenuMessage(){
         return "Available options:\n"+
-                "1 - List available books in inventory\n"+
+                "1 - List available books in database\n"+
                 "2 - Checkout Book\n"+
                 "3 - Return Book\n"+
                 "0 - Quit\n";

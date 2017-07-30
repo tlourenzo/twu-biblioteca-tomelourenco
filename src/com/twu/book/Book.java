@@ -15,7 +15,7 @@ public class Book {
 
 
     /**
-     * Entity that represents each book in inventory
+     * Entity that represents each book in database
      * @param bookName
      * @param author
      * @param yearPublished

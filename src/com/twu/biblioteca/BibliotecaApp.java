@@ -5,13 +5,11 @@
 
 package com.twu.biblioteca;
 
-import com.twu.inventory.Inventory;
+import com.twu.database.Inventory;
 import com.twu.menus.CheckoutMenu;
 import com.twu.menus.MainMenu;
 import com.twu.menus.ReturnMenu;
 import com.twu.utilities.DisplayMessages;
-
-import java.util.Scanner;
 
 /**
  * Created by Tome Lourenco

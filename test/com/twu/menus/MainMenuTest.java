@@ -1,5 +1,8 @@
+/*
+ * Created by Tome Lourenco for TWU 101
+ * v.1.0
+ */
 package com.twu.menus;
-
 
 import com.twu.book.Book;
 import com.twu.inventory.Inventory;
@@ -14,7 +17,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 

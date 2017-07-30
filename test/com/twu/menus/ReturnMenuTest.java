@@ -16,7 +16,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by tlourenzo on 29-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public class ReturnMenuTest {
 

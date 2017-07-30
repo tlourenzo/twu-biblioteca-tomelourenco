@@ -8,6 +8,10 @@ import com.twu.utilities.DisplayMessages;
 
 import java.util.Scanner;
 
+/**
+ * Created by Tome Lourenco
+ * v.1.0
+ */
 public class BibliotecaApp {
 
     public static void main(String[] args) {

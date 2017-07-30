@@ -1,13 +1,20 @@
 package com.twu.book;
-
 /**
- * Created by tlourenzo on 28-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public class Book {
     private String bookName;
     private String author;
     private int yearPublished;
 
+
+    /**
+     * Entity that represents each book in inventory
+     * @param bookName
+     * @param author
+     * @param yearPublished
+     */
     public Book(String bookName, String author, int yearPublished) {
         this.bookName = bookName;
         this.author = author;

@@ -5,10 +5,18 @@ import com.twu.book.Book;
 import java.util.List;
 
 /**
- * Created by tlourenzo on 28-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public class Utilities {
 
+    /**
+     *
+     * Receiving a book list, this method is designed to maintain a certain structure in displaying that list,
+     * to keep a column for each field.
+     * @param bookList
+     * @return
+     */
     public static String displayFormattedBookList(List<Book> bookList) {
         String formattedBookList = "";
         int index = 0;

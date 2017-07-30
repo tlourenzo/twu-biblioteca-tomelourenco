@@ -8,7 +8,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by tlourenzo on 28-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public class UtilitiesTest {
 

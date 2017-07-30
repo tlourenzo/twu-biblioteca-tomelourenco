@@ -10,7 +10,8 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
- * Created by tlourenzo on 28-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public class CheckoutMenu {
 
@@ -20,6 +21,15 @@ public class CheckoutMenu {
     private PrintStream output;
     private boolean back;
 
+    /**
+     * Method to start the console display of the checkout menu selection,
+     * it receives all necessary streams and inventory to work with, as
+     * well as all available messages to be displayed. Ir runs an aux method start();
+     * @param inventory
+     * @param display
+     * @param input
+     * @param output
+     */
     public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output){
         this.inventory = inventory;
         this.display = display;
@@ -28,6 +38,12 @@ public class CheckoutMenu {
         start();
     }
 
+
+    /**
+     * Aux method to display the right messages and to receive user choice upon the presented list.
+     * It is protected from abusing behavior or wrong keys.
+     * Uses a recursive method if any wrong key is displayed.
+     */
     private void start() {
         output.print(display.availableBooksListTitle());
         output.print(display.bookListingMessage());
@@ -43,6 +59,11 @@ public class CheckoutMenu {
 
     }
 
+
+    /**
+     * Receiving a right option, this method will invoke the checkout method from the inventory.
+     * @param selectOption
+     */
     private void checkoutMenuOption(int selectOption) {
         if(selectOption == 0){
             return;

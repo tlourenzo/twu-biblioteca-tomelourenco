@@ -1,11 +1,18 @@
 package com.twu.utilities;
 
 /**
- * Created by tlourenzo on 28-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public final class DisplayMessages {
 
     private final static DisplayMessages INSTANCE = new DisplayMessages();
+
+
+    /**
+     * Singleton created with the purpose to handle all app messages.
+     * Its several messages/methods are used around the app.
+     */
     private DisplayMessages() {
     }
 

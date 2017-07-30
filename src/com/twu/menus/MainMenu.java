@@ -10,7 +10,8 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
- * Created by tlourenzo on 28-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public class MainMenu {
 
@@ -22,6 +23,18 @@ public class MainMenu {
     private DisplayMessages display;
     private boolean exit;
 
+    /**
+     * Starting point of the entire program, as the main menu, this method receives all necessary streams to display and
+     * receive user input, as well as display messages, and the existing inventory.
+     * Uses an aux method init() to start displaying choices.
+     *
+     * @param inventory
+     * @param inputStream
+     * @param outputStream
+     * @param displayMessages
+     * @param checkoutMenu
+     * @param returnMenu
+     */
     public void run(Inventory inventory, InputStream inputStream, PrintStream outputStream,
                     DisplayMessages displayMessages, CheckoutMenu checkoutMenu, ReturnMenu returnMenu) {
         this.inventory = inventory;
@@ -33,6 +46,11 @@ public class MainMenu {
         init();
     }
 
+    /**
+     * Aux method used by run() method to display menu information and keep it as loop
+     * as long user don't quit the program.
+     * uses an aux method, mainMenuOption() to handle user choices.
+     */
     private void init() {
         output.print(display.welcomeMessage());
         do {
@@ -47,6 +65,11 @@ public class MainMenu {
         }while(!exit);
     }
 
+    /**
+     * Method to handle user choices and proceed to the right action.
+     * uses user input to trigger the right method.
+     * @param inputOption
+     */
     private void mainMenuOption(int inputOption) {
         switch (inputOption){
             case 1:

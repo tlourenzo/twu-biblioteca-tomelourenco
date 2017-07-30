@@ -11,7 +11,8 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
- * Created by tlourenzo on 28-07-2017.
+ * Created by Tome Lourenco
+ * v.1.0
  */
 public class ReturnMenu {
 
@@ -21,6 +22,15 @@ public class ReturnMenu {
     private PrintStream output;
 
 
+    /**
+     * Method to start the console display of the return menu selection,
+     * it receives all necessary streams and inventory to work with, as
+     * well as all available messages to be displayed. Ir runs an aux method start();
+     * @param inventory
+     * @param display
+     * @param input
+     * @param output
+     */
     public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output){
 
         this.inventory = inventory;
@@ -30,6 +40,11 @@ public class ReturnMenu {
         start();
     }
 
+    /**
+     * Aux method to display the right messages and to receive user choice upon the presented list.
+     * It is protected from abusing behavior or wrong keys.
+     * Uses a recursive method if any wrong key is displayed.
+     */
     private void start() {
         output.print(display.returninBooksListTitle());
         output.print(display.bookListingMessage());
@@ -45,6 +60,10 @@ public class ReturnMenu {
 
     }
 
+    /**
+     * Receiving a right option, this method will invoke the return method from the inventory.
+     * @param selectOption
+     */
     private void returnMenuOption(int selectOption) {
         if(selectOption == 0){
             return;

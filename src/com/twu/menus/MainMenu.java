@@ -38,10 +38,11 @@ public class MainMenu {
         do {
             output.print(display.mainMenuMessage());
             output.print(display.optionsMessage());
-            if(input.hasNextInt()){
+            if(input.hasNext("\\d+")){
                 mainMenuOption(input.nextInt());
             }else{
                 output.print(display.incorrectInputMessage());
+                input.nextLine();
             }
         }while(!exit);
     }

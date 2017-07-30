@@ -50,6 +50,7 @@ public class MainMenu {
     private void mainMenuOption(int inputOption) {
         switch (inputOption){
             case 1:
+                output.print(display.allBooksListTitle());
                 output.print(display.bookListingMessage());
                 output.print(Utilities.displayFormattedBookList(inventory.getAvailableBooksList()));
                 break;

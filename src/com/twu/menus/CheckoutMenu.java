@@ -29,10 +29,18 @@ public class CheckoutMenu {
     }
 
     private void start() {
+        output.print(display.availableBooksListTitle());
         output.print(display.bookListingMessage());
         output.print(Utilities.displayFormattedBookList(inventory.getAvailableBooksList()));
         output.print(display.checkoutMessage());
-        checkoutMenuOption(input.nextInt());
+        if(input.hasNext("\\d+")){
+            checkoutMenuOption(input.nextInt());
+        }else{
+            output.print(display.incorrectInputMessage());
+            input.nextLine();
+            start();
+        }
+
     }
 
     private void checkoutMenuOption(int selectOption) {

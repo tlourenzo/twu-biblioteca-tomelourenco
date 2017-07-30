@@ -29,10 +29,20 @@ public final class DisplayMessages {
         return "Select your request by using the corresponding number:\n";
     }
 
+    public String availableBooksListTitle(){
+        return "Books available to checkout:\n\n";
+    }
+
+    public String returninBooksListTitle(){
+        return "Books to be returned:\n\n";
+    }
+
+    public String allBooksListTitle(){
+        return "Inventory of our Biblioteca:\n\n";
+    }
+
     public String bookListingMessage(){
-        String availableBooks = "Available Books:\n\n";
-        String formattedColumnTitle = String.format("%-15s %-15s %-15s %-15s\n", "Book ID", "Title", "Author", "Year Published");
-        return availableBooks + formattedColumnTitle;
+        return String.format("%-15s %-15s %-15s %-15s\n", "Book ID", "Title", "Author", "Year Published");
     }
 
     public String incorrectInputMessage(){

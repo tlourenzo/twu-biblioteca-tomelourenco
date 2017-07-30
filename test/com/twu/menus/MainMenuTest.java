@@ -67,7 +67,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
                 "Select your request by using the corresponding number:\n" +
-                "Available Books:\n" +
+                "Inventory of our Biblioteca:\n" +
                 "\n" +
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +
@@ -160,7 +160,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "0 - Quit\n" +
                 "Select your request by using the corresponding number:\n" +
-                "Available Books:\n" +
+                "Inventory of our Biblioteca:\n" +
                 "\n" +
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +

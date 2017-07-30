@@ -31,10 +31,18 @@ public class ReturnMenu {
     }
 
     private void start() {
+        output.print(display.returninBooksListTitle());
         output.print(display.bookListingMessage());
         output.print(Utilities.displayFormattedBookList(inventory.getCheckedOutBooksList()));
         output.print(display.returnMessage());
-        returnMenuOption(input.nextInt());
+        if(input.hasNext("\\d+")){
+            returnMenuOption(input.nextInt());
+        }else{
+            output.print(display.incorrectInputMessage());
+            input.nextLine();
+            start();
+        }
+
     }
 
     private void returnMenuOption(int selectOption) {

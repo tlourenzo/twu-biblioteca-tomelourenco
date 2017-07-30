@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by tlourenzo on 29-07-2017.
@@ -34,18 +35,49 @@ public class CheckoutMenuTest {
 
     @Test
     public void testCheckoutMenuInit(){
-        String input = "";
+        String input = "1\n";
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        //checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream);
+        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream);
+        String output = baos.toString();
 
-        assertEquals(1, 1);
+        assertEquals("Books available to checkout:\n" +
+                "\n" +
+                "Book ID         Title           Author          Year Published \n" +
+                "1               Test Book       TWU             2017           \n" +
+                "Please select the book to checkout by Book ID or press 0 to return to main Menu:\n" +
+                "\n" +
+                "Thank you for checking your book out! Enjoy  Test Book by TWU\n" +
+                "\n", output);
     }
 
+    @Test
+    public void testWrongIdInput(){
+        String input = "9\n0\n";
+        InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(baos);
 
+        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream);
+        String output = baos.toString();
 
+        assertTrue(output.contains("Please select a valid option."));
+    }
+
+    @Test
+    public void testWrongIdInputAsLetter() {
+        String input = "a\n0\n";
+        InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(baos);
+
+        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream);
+        String output = baos.toString();
+
+        assertTrue(output.contains("Please select a valid option."));
+    }
 
 
     private class MockInventory extends Inventory {

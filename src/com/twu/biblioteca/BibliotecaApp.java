@@ -6,7 +6,9 @@
 package com.twu.biblioteca;
 
 import com.twu.database.Inventory;
+import com.twu.database.UsersDB;
 import com.twu.menus.CheckoutMenu;
+import com.twu.menus.LoginMenu;
 import com.twu.menus.MainMenu;
 import com.twu.menus.ReturnMenu;
 import com.twu.utilities.DisplayMessages;
@@ -22,8 +24,10 @@ public class BibliotecaApp {
         MainMenu mainMenu = new MainMenu();
         CheckoutMenu checkoutMenu = new CheckoutMenu();
         ReturnMenu returnMenu = new ReturnMenu();
+        LoginMenu login = new LoginMenu();
+        UsersDB usersDB = new UsersDB();
         DisplayMessages displayMessages = DisplayMessages.getInstance();
 
-        mainMenu.run(inventory, System.in, System.out, displayMessages, checkoutMenu, returnMenu);
+        login.run(usersDB, System.in, System.out, displayMessages, mainMenu, checkoutMenu, returnMenu, inventory);
     }
 }

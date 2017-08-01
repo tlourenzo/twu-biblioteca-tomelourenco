@@ -9,6 +9,7 @@ package com.twu.menus;
 
 import com.twu.book.Book;
 import com.twu.database.Inventory;
+import com.twu.user.User;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
 
@@ -35,8 +36,9 @@ public class ReturnMenu {
      * @param display
      * @param input
      * @param output
+     * @param loggedUser
      */
-    public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output){
+    public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser){
 
         this.inventory = inventory;
         this.display = display;
@@ -51,10 +53,10 @@ public class ReturnMenu {
      * Uses a recursive method if any wrong key is displayed.
      */
     private void start() {
-        output.print(display.returninBooksListTitle());
+        output.print(display.returningBooksListTitle());
         output.print(display.bookListingMessage());
         output.print(Utilities.displayFormattedBookList(inventory.getCheckedOutBooksList()));
-        output.print(display.returnMessage());
+        output.print(display.returnBookMessage());
         if(input.hasNext("\\d+")){
             returnMenuOption(input.nextInt());
         }else{
@@ -77,7 +79,7 @@ public class ReturnMenu {
             if(selectOption >0 && selectOption<=inventory.getCheckedOutBooksList().size()){
                 Book bookToReturn = inventory.getCheckedOutBooksList().get(selectOption-1);
                 inventory.returnBook(bookToReturn);
-                output.print(display.successReturnMessage() + " " + bookToReturn.getBookName() + " by " + bookToReturn.getAuthor()+ "\n\n");
+                output.print(display.successBookReturnMessage() + " " + bookToReturn.getBookName() + " by " + bookToReturn.getAuthor()+ "\n\n");
             }
             else{
                 output.print(display.incorrectInputMessage());

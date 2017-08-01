@@ -7,6 +7,7 @@
 package com.twu.menus;
 
 import com.twu.database.Inventory;
+import com.twu.user.User;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
 
@@ -25,13 +26,14 @@ public class MainMenu {
     private PrintStream output;
     private CheckoutMenu checkoutMenu;
     private ReturnMenu returnMenu;
+    private User loggedUser;
     private DisplayMessages display;
     private boolean exit;
 
     /**
      * Starting point of the entire program, as the main menu, this method receives all necessary streams to display and
      * receive user input, as well as display messages, and the existing database.
-     * Uses an aux method init() to start displaying choices.
+     * Uses an aux method start() to start displaying choices.
      *
      * @param inventory
      * @param inputStream
@@ -41,14 +43,15 @@ public class MainMenu {
      * @param returnMenu
      */
     public void run(Inventory inventory, InputStream inputStream, PrintStream outputStream,
-                    DisplayMessages displayMessages, CheckoutMenu checkoutMenu, ReturnMenu returnMenu) {
+                    DisplayMessages displayMessages, CheckoutMenu checkoutMenu, ReturnMenu returnMenu, User loggedUser) {
         this.inventory = inventory;
         this.input = new Scanner(inputStream);
         this.output = outputStream;
         this.display = displayMessages;
         this.checkoutMenu = checkoutMenu;
         this.returnMenu = returnMenu;
-        init();
+        this.loggedUser = loggedUser;
+        start();
     }
 
     /**
@@ -56,8 +59,8 @@ public class MainMenu {
      * as long user don't quit the program.
      * uses an aux method, mainMenuOption() to handle user choices.
      */
-    private void init() {
-        output.print(display.welcomeMessage());
+    private void start() {
+        output.print(display.welcomeMessage() + loggedUser.getName() +"\n\n");
         do {
             output.print(display.mainMenuMessage());
             output.print(display.optionsMessage());
@@ -84,16 +87,31 @@ public class MainMenu {
                 break;
             case 2:
                 if(inventory.getAvailableBooksList().isEmpty()){
-                    output.print(display.incorrectCheckoutMessage());
+                    output.print(display.incorrectBookCheckoutMessage());
                 }else{
-                    checkoutMenu.run(inventory, display, input, output);
+                    checkoutMenu.run(inventory, display, input, output, loggedUser);
                 }
                 break;
             case 3:
                 if(inventory.getCheckedOutBooksList().isEmpty()){
                     output.print(display.incorrectBookReturnMessage());
                 }else{
-                    returnMenu.run(inventory, display, input, output);
+                    returnMenu.run(inventory, display, input, output, loggedUser);
+                }
+                break;
+            case 4:
+                if(inventory.getAvailableMoviesList().isEmpty()){
+                    output.print(display.incorrectBookCheckoutMessage());
+                }else{
+                    checkoutMenu.run(inventory, display, input, output, loggedUser);
+                }
+                break;
+
+            case 5:
+                if(inventory.getCheckedOutMoviesList().isEmpty()){
+                    output.print(display.incorrectMovieReturnMessage());
+                }else{
+                    checkoutMenu.run(inventory, display, input, output, loggedUser);
                 }
                 break;
             case 0:

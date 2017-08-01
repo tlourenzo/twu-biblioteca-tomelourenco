@@ -7,6 +7,7 @@ package com.twu.menus;
 
 import com.twu.book.Book;
 import com.twu.database.Inventory;
+import com.twu.user.User;
 import com.twu.utilities.DisplayMessages;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,6 +30,7 @@ public class CheckoutMenuTest {
     private Inventory inventory;
     private CheckoutMenu checkoutMenu;
     private ReturnMenu returnMenu;
+    private User loggedUser;
 
     @Before
     public void setUp() throws UnsupportedEncodingException {
@@ -36,6 +38,7 @@ public class CheckoutMenuTest {
         inventory = new MockInventory();
         checkoutMenu = new MockCheckoutMenu();
         returnMenu = new MockReturnMenu();
+        loggedUser = new User("123-1234", "1234","Test User","Test@Email", "0000000");
     }
 
 
@@ -46,7 +49,7 @@ public class CheckoutMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream);
+        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream, loggedUser);
         String output = baos.toString();
 
         assertEquals("Books available to checkout:\n" +
@@ -66,7 +69,7 @@ public class CheckoutMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream);
+        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream, loggedUser);
         String output = baos.toString();
 
         assertTrue(output.contains("Please select a valid option."));
@@ -79,7 +82,7 @@ public class CheckoutMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream);
+        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream, loggedUser);
         String output = baos.toString();
 
         assertTrue(output.contains("Please select a valid option."));

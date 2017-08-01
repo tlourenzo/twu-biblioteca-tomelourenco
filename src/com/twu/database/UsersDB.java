@@ -6,7 +6,6 @@
 package com.twu.database;
 
 import com.twu.user.User;
-import com.twu.utilities.DisplayMessages;
 
 import java.util.*;
 
@@ -27,7 +26,7 @@ public class UsersDB {
         users.put("222-2222",new User("222-2222", "123456", "Awesome User 2", "user2@email.com", "99999999"));
         users.put("333-3333",new User("333-3333", "123456", "Awesome User 3", "user3@email.com", "99999999"));
         users.put("444-4444",new User("444-4444", "123456", "Awesome User 4", "user4@email.com", "99999999"));
-
+        users.put("000-0000",new User("000-0000", "123456", "Librarian", "librarian@email.com", "99999999"));
     }
 
     public User getUserByID(String ID){

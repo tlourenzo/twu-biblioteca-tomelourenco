@@ -4,6 +4,9 @@
  */
 
 package com.twu.book;
+
+import com.twu.user.User;
+
 /**
  * Created by Tome Lourenco
  * v.1.0
@@ -12,7 +15,7 @@ public class Book {
     private String bookName;
     private String author;
     private int yearPublished;
-
+    private User userHoldingBook = null;
 
     /**
      * Entity that represents each book in database
@@ -25,6 +28,7 @@ public class Book {
         this.author = author;
         this.yearPublished = yearPublished;
     }
+
 
     public String getBookName() {
         return bookName;
@@ -48,6 +52,14 @@ public class Book {
 
     public void setYearPublished(int yearPublished) {
         this.yearPublished = yearPublished;
+    }
+
+    public User getUserHoldingBook() {
+        return userHoldingBook;
+    }
+
+    public void setUserHoldingBook(User userHoldingBook) {
+        this.userHoldingBook = userHoldingBook;
     }
 
     @Override

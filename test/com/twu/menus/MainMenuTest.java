@@ -6,6 +6,7 @@ package com.twu.menus;
 
 import com.twu.book.Book;
 import com.twu.database.Inventory;
+import com.twu.user.User;
 import com.twu.utilities.DisplayMessages;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,6 +32,7 @@ public class MainMenuTest {
     private Inventory inventory;
     private CheckoutMenu checkoutMenu;
     private ReturnMenu returnMenu;
+    private User mockLoggedUser;
 
     @Before
     public void setUp() throws UnsupportedEncodingException {
@@ -39,6 +41,7 @@ public class MainMenuTest {
         inventory = new MockInventory();
         checkoutMenu = new MockCheckoutMenu();
         returnMenu = new MockReturnMenu();
+        mockLoggedUser= new User("123-1234", "1234","Test User","Test@Email", "0000000");
     }
 
     @Test
@@ -49,17 +52,17 @@ public class MainMenuTest {
         final PrintStream printStream = new PrintStream(baos);
         CheckoutMenu checkoutMenu = new MockCheckoutMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output) {
+            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nCheckout Menu Called\n\n");
             }
         };
         ReturnMenu returnMenu = new MockReturnMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output) {
+            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nReturn Menu Called\n\n");
             }
         };
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca\n" +
@@ -110,7 +113,7 @@ public class MainMenuTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca\n" +
@@ -140,7 +143,7 @@ public class MainMenuTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
         String output = baos.toString();
 
         assertTrue(output.contains("Please select a valid option."));
@@ -152,7 +155,7 @@ public class MainMenuTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca\n" +
@@ -185,12 +188,12 @@ public class MainMenuTest {
         final PrintStream printStream = new PrintStream(baos);
         CheckoutMenu checkoutMenu = new MockCheckoutMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output) {
+            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nCheckout Menu Called\n\n");
             }
         };
 
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca\n" +
@@ -223,11 +226,11 @@ public class MainMenuTest {
         final PrintStream printStream = new PrintStream(baos);
         ReturnMenu returnMenu = new MockReturnMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output) {
+            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nReturn Menu Called\n\n");
             }
         };
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca\n" +
@@ -258,7 +261,7 @@ public class MainMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
 
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca\n" +
@@ -294,7 +297,7 @@ public class MainMenuTest {
     private class MockCheckoutMenu extends CheckoutMenu {
         public boolean checkoutMenuCalled = false;
         @Override
-        public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output) {
+        public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
             checkoutMenuCalled = true;
         }
     }
@@ -302,7 +305,7 @@ public class MainMenuTest {
     private class MockReturnMenu extends ReturnMenu {
         public boolean returnMenuCalled = false;
         @Override
-        public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output) {
+        public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
             returnMenuCalled = true;
         }
     }

@@ -7,6 +7,7 @@ package com.twu.menus;
 
 import com.twu.book.Book;
 import com.twu.database.Inventory;
+import com.twu.user.User;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
 
@@ -23,6 +24,7 @@ public class CheckoutMenu {
     private DisplayMessages display;
     private Scanner input;
     private PrintStream output;
+    private User loggedUser;
     private boolean back;
 
     /**
@@ -34,11 +36,12 @@ public class CheckoutMenu {
      * @param input
      * @param output
      */
-    public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output){
+    public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser){
         this.inventory = inventory;
         this.display = display;
         this.input = input;
         this.output = output;
+        this.loggedUser = loggedUser;
         start();
     }
 
@@ -52,7 +55,7 @@ public class CheckoutMenu {
         output.print(display.availableBooksListTitle());
         output.print(display.bookListingMessage());
         output.print(Utilities.displayFormattedBookList(inventory.getAvailableBooksList()));
-        output.print(display.checkoutMessage());
+        output.print(display.checkoutBookMessage());
         if(input.hasNext("\\d+")){
             checkoutMenuOption(input.nextInt());
         }else{
@@ -75,8 +78,8 @@ public class CheckoutMenu {
         else{
             if(selectOption >0 && selectOption<=inventory.getAvailableBooksList().size()){
                 Book bookToCheckout = inventory.getAvailableBooksList().get(selectOption-1);
-                inventory.checkoutBook(bookToCheckout);
-                output.print(display.successCheckoutMessage() + " " + bookToCheckout.getBookName() + " by " + bookToCheckout.getAuthor()+ "\n\n");
+                inventory.checkoutBook(bookToCheckout, loggedUser);
+                output.print(display.successBookCheckoutMessage() + " " + bookToCheckout.getBookName() + " by " + bookToCheckout.getAuthor()+ "\n\n");
             }
             else{
                 output.print(display.incorrectInputMessage());

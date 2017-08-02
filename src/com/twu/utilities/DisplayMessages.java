@@ -35,7 +35,7 @@ public final class DisplayMessages {
                 "2 - Checkout Book\n"+
                 "3 - Return Book\n"+
                 "4 - Checkout Movie\n"+
-                "5 - Return Book\n"+
+                "5 - Return Movie\n"+
                 "0 - Logout\n";
     }
 
@@ -52,7 +52,7 @@ public final class DisplayMessages {
     }
 
     public String allBooksListTitle(){
-        return "Inventory of our Biblioteca:\n\n";
+        return "Book Inventory of our Biblioteca:\n\n";
     }
 
     public String bookListingMessage(){
@@ -60,7 +60,11 @@ public final class DisplayMessages {
     }
 
     public String movieListingMessage(){
-        return String.format("%-15s %-15s %-15s %-15s %-15s\n", "Movie ID", "Name", "Director", "Year", "Rating");
+        return String.format("%-15s %-15s %-15s %-15d %-15s\n", "Movie ID", "Name", "Director", "Year", "Rating");
+    }
+
+    public String librarianListingMessage(){
+        return String.format("%-15s %-15s %-15s %-15s\n", "Type", "Title","Author/Director","Current Holder");
     }
 
     public String incorrectInputMessage(){
@@ -115,13 +119,54 @@ public final class DisplayMessages {
         return "Login done with Success!";
     }
 
+    public String userNotFoundMessage() {
+        return "Error! User not Found!\n";
+    }
+
+    public String wrongPasswordMessage() {
+        return "Error! Password Invalid!\n";
+    }
 
 
+    public String incorrectMovieReturnMessage(){
+        return "No movies to be returned.\n\n";
+    }
 
+    public String incorrectMovieCheckoutMessage(){
+        return "No available movies to checkout.\n\n";
+    }
 
+    public String successMovieCheckoutMessage(){
+        return "Thank you for checking your movie out! Enjoy ";
+    }
 
+    public String successMovieReturnMessage(){
+        return "Thank you for returning your movie. We hope you have enjoyed watching ";
+    }
+    public String checkoutMovieMessage(){
+        return "Please select the book to checkout by Movie ID or press 0 to return to main Menu:\n\n";
+    }
+    public String returnMovieMessage(){
+        return "Please select the returning book by Movie ID or press 0 to return to main Menu:\n\n";
+    }
 
-    public String incorrectMovieReturnMessage() {
-        return "";
+    public String availableMoviesListTitle(){
+        return "Movie available to checkout:\n\n";
+    }
+
+    public String returningMoviesListTitle(){
+        return "Movies to be returned:\n\n";
+    }
+
+    public String allMoviesListTitle(){
+        return "Movie Inventory of our Biblioteca:\n\n";
+    }
+
+    public String managementWelcomeMessage() {
+        return "\n\nWelcome to the Management Menu \n\n";
+    }
+
+    public String librarianLogoutMessage() {
+        return "\nPlease press 0 to exit.\n";
     }
 }

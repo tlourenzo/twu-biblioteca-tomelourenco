@@ -32,13 +32,14 @@ public class ReturnMenu {
      * Method to start the console display of the return menu selection,
      * it receives all necessary streams and database to work with, as
      * well as all available messages to be displayed. Ir runs an aux method start();
+     * @param typeOfItemToReturn
      * @param inventory
      * @param display
      * @param input
      * @param output
      * @param loggedUser
      */
-    public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser){
+    public void run(String typeOfItemToReturn, Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser){
 
         this.inventory = inventory;
         this.display = display;

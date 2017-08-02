@@ -60,6 +60,8 @@ public class MainMenu {
      * uses an aux method, mainMenuOption() to handle user choices.
      */
     private void start() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
         output.print(display.welcomeMessage() + loggedUser.getName() +"\n\n");
         do {
             output.print(display.mainMenuMessage());
@@ -89,21 +91,21 @@ public class MainMenu {
                 if(inventory.getAvailableBooksList().isEmpty()){
                     output.print(display.incorrectBookCheckoutMessage());
                 }else{
-                    checkoutMenu.run(inventory, display, input, output, loggedUser);
+                    checkoutMenu.run("book",inventory, display, input, output, loggedUser);
                 }
                 break;
             case 3:
                 if(inventory.getCheckedOutBooksList().isEmpty()){
                     output.print(display.incorrectBookReturnMessage());
                 }else{
-                    returnMenu.run(inventory, display, input, output, loggedUser);
+                    returnMenu.run("movie", inventory, display, input, output, loggedUser);
                 }
                 break;
             case 4:
                 if(inventory.getAvailableMoviesList().isEmpty()){
                     output.print(display.incorrectBookCheckoutMessage());
                 }else{
-                    checkoutMenu.run(inventory, display, input, output, loggedUser);
+                    checkoutMenu.run("movie",inventory, display, input, output, loggedUser);
                 }
                 break;
 
@@ -111,7 +113,7 @@ public class MainMenu {
                 if(inventory.getCheckedOutMoviesList().isEmpty()){
                     output.print(display.incorrectMovieReturnMessage());
                 }else{
-                    checkoutMenu.run(inventory, display, input, output, loggedUser);
+                    returnMenu.run("movie",inventory, display, input, output, loggedUser);
                 }
                 break;
             case 0:

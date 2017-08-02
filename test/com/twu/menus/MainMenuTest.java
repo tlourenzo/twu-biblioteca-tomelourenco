@@ -52,28 +52,30 @@ public class MainMenuTest {
         final PrintStream printStream = new PrintStream(baos);
         CheckoutMenu checkoutMenu = new MockCheckoutMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
+            public void run(String typeOfItemToCheckout,Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nCheckout Menu Called\n\n");
             }
         };
         ReturnMenu returnMenu = new MockReturnMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
+            public void run(String typeOfItemToReturn, Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nReturn Menu Called\n\n");
             }
         };
         mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
         String output = baos.toString();
 
-        assertEquals("Welcome to Bangalore Biblioteca\n" +
+        assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
-                "Inventory of our Biblioteca:\n" +
+                "Book Inventory of our Biblioteca:\n" +
                 "\n" +
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +
@@ -81,7 +83,9 @@ public class MainMenuTest {
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
                 "\n" +
@@ -91,7 +95,9 @@ public class MainMenuTest {
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
                 "\n" +
@@ -101,7 +107,9 @@ public class MainMenuTest {
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
     }
@@ -116,13 +124,15 @@ public class MainMenuTest {
         mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
-        assertEquals("Welcome to Bangalore Biblioteca\n" +
+        assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Please select a valid option.\n" +
                 "\n" +
@@ -130,7 +140,9 @@ public class MainMenuTest {
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca", output);
 
@@ -158,15 +170,17 @@ public class MainMenuTest {
         mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
         String output = baos.toString();
 
-        assertEquals("Welcome to Bangalore Biblioteca\n" +
+        assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
-                "Inventory of our Biblioteca:\n" +
+                "Book Inventory of our Biblioteca:\n" +
                 "\n" +
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +
@@ -174,7 +188,9 @@ public class MainMenuTest {
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
 
@@ -188,7 +204,7 @@ public class MainMenuTest {
         final PrintStream printStream = new PrintStream(baos);
         CheckoutMenu checkoutMenu = new MockCheckoutMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
+            public void run(String typeOfItemToCheckout,Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nCheckout Menu Called\n\n");
             }
         };
@@ -196,13 +212,15 @@ public class MainMenuTest {
         mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
-        assertEquals("Welcome to Bangalore Biblioteca\n" +
+        assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
                 "\n" +
@@ -212,7 +230,9 @@ public class MainMenuTest {
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
 
@@ -226,20 +246,22 @@ public class MainMenuTest {
         final PrintStream printStream = new PrintStream(baos);
         ReturnMenu returnMenu = new MockReturnMenu(){
             @Override
-            public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
+            public void run(String typeOfItemToReturn, Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
                 printStream.print("\n\nReturn Menu Called\n\n");
             }
         };
         mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
-        assertEquals("Welcome to Bangalore Biblioteca\n" +
+        assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
                 "\n" +
@@ -249,7 +271,9 @@ public class MainMenuTest {
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
     }
@@ -264,13 +288,15 @@ public class MainMenuTest {
         mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
         String output = baos.toString();
 
-        assertEquals("Welcome to Bangalore Biblioteca\n" +
+        assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
                 "1 - List available books in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
-                "0 - Quit\n" +
+                "4 - Checkout Movie\n" +
+                "5 - Return Book\n" +
+                "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
 
@@ -297,7 +323,7 @@ public class MainMenuTest {
     private class MockCheckoutMenu extends CheckoutMenu {
         public boolean checkoutMenuCalled = false;
         @Override
-        public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
+        public void run(String typeOfItemToCheckout, Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
             checkoutMenuCalled = true;
         }
     }
@@ -305,7 +331,7 @@ public class MainMenuTest {
     private class MockReturnMenu extends ReturnMenu {
         public boolean returnMenuCalled = false;
         @Override
-        public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
+        public void run(String typeOfItemToReturn, Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser) {
             returnMenuCalled = true;
         }
     }

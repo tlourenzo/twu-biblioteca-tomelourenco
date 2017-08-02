@@ -28,21 +28,29 @@ public class CheckoutMenu {
     private boolean back;
 
     /**
-     * Method to start the console display of the checkout menu selection,
+     * Method to startCheckoutBook the console display of the checkout menu selection,
      * it receives all necessary streams and database to work with, as
-     * well as all available messages to be displayed. Ir runs an aux method start();
+     * well as all available messages to be displayed. Ir runs an aux method startCheckoutBook();
      * @param inventory
      * @param display
      * @param input
      * @param output
      */
-    public void run(Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser){
+    public void run(String typeOfItemToBeCheckout, Inventory inventory, DisplayMessages display, Scanner input, PrintStream output, User loggedUser){
         this.inventory = inventory;
         this.display = display;
         this.input = input;
         this.output = output;
         this.loggedUser = loggedUser;
-        start();
+        if(typeOfItemToBeCheckout.equals("book")){
+            startCheckoutBook();
+        }else if(typeOfItemToBeCheckout.equals("movie")){
+            startCheckoutMovie();
+        }
+    }
+
+    private void startCheckoutMovie() {
+
     }
 
 
@@ -51,17 +59,17 @@ public class CheckoutMenu {
      * It is protected from abusing behavior or wrong keys.
      * Uses a recursive method if any wrong key is displayed.
      */
-    private void start() {
+    private void startCheckoutBook() {
         output.print(display.availableBooksListTitle());
         output.print(display.bookListingMessage());
         output.print(Utilities.displayFormattedBookList(inventory.getAvailableBooksList()));
         output.print(display.checkoutBookMessage());
         if(input.hasNext("\\d+")){
-            checkoutMenuOption(input.nextInt());
+            checkoutBookMenuOption(input.nextInt());
         }else{
             output.print(display.incorrectInputMessage());
             input.nextLine();
-            start();
+            startCheckoutBook();
         }
 
     }
@@ -71,7 +79,7 @@ public class CheckoutMenu {
      * Receiving a right option, this method will invoke the checkout method from the database.
      * @param selectOption
      */
-    private void checkoutMenuOption(int selectOption) {
+    private void checkoutBookMenuOption(int selectOption) {
         if(selectOption == 0){
             return;
         }
@@ -80,10 +88,11 @@ public class CheckoutMenu {
                 Book bookToCheckout = inventory.getAvailableBooksList().get(selectOption-1);
                 inventory.checkoutBook(bookToCheckout, loggedUser);
                 output.print(display.successBookCheckoutMessage() + " " + bookToCheckout.getBookName() + " by " + bookToCheckout.getAuthor()+ "\n\n");
+                return;
             }
             else{
                 output.print(display.incorrectInputMessage());
-                start();
+                startCheckoutBook();
             }
         }
 

@@ -49,7 +49,7 @@ public class ReturnMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        returnMenu.run(inventory, display, new Scanner(inputStream), printStream, loggedUser);
+        returnMenu.run(input, inventory, display, new Scanner(inputStream), printStream, loggedUser);
         String output = baos.toString();
 
         assertEquals("Books to be returned:\n" +
@@ -69,7 +69,7 @@ public class ReturnMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream, loggedUser);
+        checkoutMenu.run("book", inventory, display, new Scanner(inputStream), printStream, loggedUser);
         String output = baos.toString();
 
         assertTrue(output.contains("Please select a valid option."));
@@ -82,7 +82,7 @@ public class ReturnMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        checkoutMenu.run(inventory, display, new Scanner(inputStream), printStream,loggedUser);
+        checkoutMenu.run("book", inventory, display, new Scanner(inputStream), printStream,loggedUser);
         String output = baos.toString();
 
         assertTrue(output.contains("Please select a valid option."));

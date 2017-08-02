@@ -23,17 +23,19 @@ public class LoginMenu {
     private Scanner input;
     private PrintStream output;
     private DisplayMessages display;
+    private LibrarianMenu librarianMenu;
     private MainMenu mainmenu;
     private CheckoutMenu checkoutMenu;
     private ReturnMenu returnMenu;
     private Inventory inventory;
 
-    public void run(UsersDB usersDB, InputStream input, PrintStream output, DisplayMessages display, MainMenu mainmenu, CheckoutMenu checkoutMenu, ReturnMenu returnMenu, Inventory inventory) {
+    public void run(UsersDB usersDB, InputStream input, PrintStream output, DisplayMessages display, LibrarianMenu librarianMenu, MainMenu mainmenu, CheckoutMenu checkoutMenu, ReturnMenu returnMenu, Inventory inventory) {
 
         this.usersDB = usersDB;
         this.input = new Scanner(input);
         this.output = output;
         this.display = display;
+        this.librarianMenu = librarianMenu;
         this.mainmenu = mainmenu;
         this.checkoutMenu = checkoutMenu;
         this.returnMenu = returnMenu;
@@ -66,14 +68,23 @@ public class LoginMenu {
 
     private void login(String username, String password) {
 
-        if(!usersDB.getUserByID(username).equals(null)){
-            User user = usersDB.getUserByID(username);
-            if(user.getPassword().equals(password)){
-                display.loginSuccessfullyMessage();
-                mainmenu.run(inventory, System.in, System.out, display, checkoutMenu, returnMenu, user);
-            }else{
-
+        try{
+            if(!usersDB.getUserByID(username).equals(null)){
+                User user = usersDB.getUserByID(username);
+                if(user.getPassword().equals(password)){
+                    output.print(display.loginSuccessfullyMessage());
+                    if(user.getUsername().equals("000-0000")){
+                        librarianMenu.run(inventory,System.in, System.out, display, user);
+                    }else{
+                        mainmenu.run(inventory, System.in, System.out, display, checkoutMenu, returnMenu, user);
+                    }
+                }else{
+                    output.print(display.wrongPasswordMessage());
+                }
             }
+
+        }catch(Exception e){
+            output.print(display.userNotFoundMessage());
         }
     }
 }

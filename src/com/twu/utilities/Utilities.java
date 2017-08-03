@@ -34,6 +34,11 @@ public class Utilities {
         return formattedBookList;
     }
 
+    /**
+     * Receiving a movie list, this method is designed to maintain a certain structure in displaying that list.
+     * @param movieList
+     * @return
+     */
     public static String displayFormattedMovieList(List<Movie> movieList) {
         String formattedMovieList = "";
         int index = 0;
@@ -45,6 +50,11 @@ public class Utilities {
         return formattedMovieList;
     }
 
+    /**
+     * Receiving a generic list, this method is designed to maintain a certain structure in displaying that list as a management type of list
+     * @param list
+     * @return
+     */
     public static String displayFormattedLibrarianList(List list){
         String formattedList = "";
         for(Object object : list){

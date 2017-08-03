@@ -6,6 +6,7 @@ package com.twu.menus;
 
 import com.twu.book.Book;
 import com.twu.database.Inventory;
+import com.twu.movie.Movie;
 import com.twu.user.User;
 import com.twu.utilities.DisplayMessages;
 import org.junit.Before;
@@ -68,23 +69,27 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Book Inventory of our Biblioteca:\n" +
                 "\n" +
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +
+                "Movie Inventory of our Biblioteca:\n" +
+                "\n" +
+                "Movie ID        Name            Director        Year            Rating         \n" +
+                "1               Test Movie      TestDirector    2017            10             \n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -92,11 +97,11 @@ public class MainMenuTest {
                 "Checkout Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -104,11 +109,11 @@ public class MainMenuTest {
                 "Return Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -127,21 +132,21 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Please select a valid option.\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca", output);
@@ -173,23 +178,27 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Book Inventory of our Biblioteca:\n" +
                 "\n" +
                 "Book ID         Title           Author          Year Published \n" +
                 "1               Test Book       TWU             2017           \n" +
+                "Movie Inventory of our Biblioteca:\n" +
+                "\n" +
+                "Movie ID        Name            Director        Year            Rating         \n" +
+                "1               Test Movie      TestDirector    2017            10             \n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -215,11 +224,11 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -227,11 +236,11 @@ public class MainMenuTest {
                 "Checkout Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -256,11 +265,11 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -268,11 +277,11 @@ public class MainMenuTest {
                 "Return Menu Called\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -291,11 +300,11 @@ public class MainMenuTest {
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
                 "\n" +
                 "Available options:\n" +
-                "1 - List available books in database\n" +
+                "1 - List available items in database\n" +
                 "2 - Checkout Book\n" +
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
-                "5 - Return Book\n" +
+                "5 - Return Movie\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -315,9 +324,25 @@ public class MainMenuTest {
         }
 
         @Override
+        public List<Movie> getMovieList() {
+            return Collections.singletonList(new Movie("Test Movie", 2017, "TestDirector", "10"));
+        }
+
+        @Override
+        public List<Movie> getAvailableMoviesList() {
+            return Collections.singletonList(new Movie("Test Movie", 2017, "TestDirector", "10"));
+        }
+
+        @Override
+        public List<Movie> getCheckedOutMoviesList() {
+            return Collections.singletonList(new Movie("Test Movie", 2017, "TestDirector", "10"));
+        }
+
+        @Override
         public List<Book> getBookList() {
             return Collections.singletonList(new Book("Test Book", "TWU", 2017));
         }
+
     }
 
     private class MockCheckoutMenu extends CheckoutMenu {

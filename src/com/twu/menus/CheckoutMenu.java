@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 /**
  * Created by Tome Lourenco
- * v.1.0
+ * v.2.0
  */
 public class CheckoutMenu {
 
@@ -26,7 +26,6 @@ public class CheckoutMenu {
     private Scanner input;
     private PrintStream output;
     private User loggedUser;
-    private boolean back;
 
     /**
      * Method to startCheckoutBook the console display of the checkout menu selection,

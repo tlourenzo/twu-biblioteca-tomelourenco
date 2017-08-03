@@ -43,13 +43,13 @@ public class ReturnMenuTest {
     }
 
     @Test
-    public void testReturnMenuInit(){
+    public void testReturnBookMenuInit(){
         String input = "1\n";
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
 
-        returnMenu.run(input, inventory, display, new Scanner(inputStream), printStream, loggedUser);
+        returnMenu.run("book", inventory, display, new Scanner(inputStream), printStream, loggedUser);
         String output = baos.toString();
 
         assertEquals("Books to be returned:\n" +

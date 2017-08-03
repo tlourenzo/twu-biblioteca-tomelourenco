@@ -16,6 +16,15 @@ public class User {
     private String email;
     private String phonenumber;
 
+    /**
+     *
+     * This class is meant to be the entity representation of the User (consumer)
+     * @param username
+     * @param password
+     * @param name
+     * @param email
+     * @param phonenumber
+     */
     public User(String username, String password, String name, String email, String phonenumber) {
         this.username = username;
         this.password = password;

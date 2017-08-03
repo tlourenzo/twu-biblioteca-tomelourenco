@@ -18,6 +18,13 @@ public class Movie {
     private String rating;
     private User userHoldingMovie = null;
 
+    /**
+     * This class is a representation of the Movie Entity
+     * @param movieName
+     * @param year
+     * @param director
+     * @param rating
+     */
     public Movie(String movieName, int year, String director, String rating) {
         this.movieName = movieName;
         this.year = year;
@@ -63,5 +70,27 @@ public class Movie {
 
     public void setUserHoldingMovie(User userHoldingMovie) {
         this.userHoldingMovie = userHoldingMovie;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Movie movie = (Movie) o;
+
+        if (year != movie.year) return false;
+        if (!movieName.equals(movie.movieName)) return false;
+        if (!director.equals(movie.director)) return false;
+        return rating != null ? rating.equals(movie.rating) : movie.rating == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = movieName.hashCode();
+        result = 31 * result + year;
+        result = 31 * result + director.hashCode();
+        result = 31 * result + (rating != null ? rating.hashCode() : 0);
+        return result;
     }
 }

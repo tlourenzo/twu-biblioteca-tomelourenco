@@ -35,9 +35,9 @@ public class Inventory {
         books.add(new Book("Awesome Book 3", "Awesome Author 3", 2017));
         books.add(new Book("Awesome Book 4", "Awesome Author 4", 2017));
         movies.add(new Movie("Awesome Movie 1", 2017, "Awesome Director 1", "10"));
-        movies.add(new Movie("Awesome Movie 2", 2017, "Awesome Director 2", "10"));
-        movies.add(new Movie("Awesome Movie 3", 2017, "Awesome Director 3", "10"));
-        movies.add(new Movie("Awesome Movie 4", 2017, "Awesome Director 4", "10"));
+        movies.add(new Movie("Awesome Movie 2", 2017, "Awesome Director 2", "9"));
+        movies.add(new Movie("#$#%^%* Movie 3", 2017, "H#$@#%& Director 3", "1"));
+        movies.add(new Movie("Unknown Movie 4", 2017, "Unknown Director 4", "unrated"));
 
     }
 
@@ -103,9 +103,6 @@ public class Inventory {
     }
 
 
-
-
-    //TODO replicate methods to movies
 
     /**
      * Method to return a list of books currently available for checking out,

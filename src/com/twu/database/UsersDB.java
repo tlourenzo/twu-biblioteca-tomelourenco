@@ -16,10 +16,16 @@ public class UsersDB {
 
     private HashMap<String, User> users;
 
+    /**
+     * This class is intended to be the current users database for the project, it allows to create and make crud operations.
+     */
     public UsersDB() {
         this.createUserdatabase();
     }
 
+    /**
+     * method design to create a user database
+     */
     private void createUserdatabase() {
         users = new HashMap<String, User>();
         users.put("111-1111",new User("111-1111", "1234", "Awesome User 1", "user1@email.com", "99999999"));
@@ -29,6 +35,11 @@ public class UsersDB {
         users.put("000-0000",new User("000-0000", "1234", "Librarian", "librarian@email.com", "99999999"));
     }
 
+    /**
+     * Receiving an ID as a parameter,this method allows to get the corresponded user from the map
+     * @param ID
+     * @return
+     */
     public User getUserByID(String ID){
         if(!users.isEmpty() && ID.matches("\\d{3}-\\d{4}") ){
             User userToReturn = users.get(ID);
@@ -37,6 +48,11 @@ public class UsersDB {
         return null;
     }
 
+    /**
+     * Given in a new user, it adds it to the database
+     * @param user
+     * @return
+     */
     public boolean addUsertoDB(User user){
             if(!users.containsKey(user.getUsername())){
                 users.put(user.getUsername(),user);
@@ -47,6 +63,11 @@ public class UsersDB {
             }
     }
 
+    /**
+     * method done to remove a given user form db
+     * @param user
+     * @return
+     */
     public boolean removeUserFromDB(User user){
         if(users.containsKey(user.getUsername())){
             users.remove(user.getUsername());
@@ -57,6 +78,11 @@ public class UsersDB {
         }
     }
 
+
+    /**
+     * Method to get a list of all users in the current db
+     * @return
+     */
     public List<User> getUsersList(){
         List<User> usersInDb = new ArrayList<User>();
         for (User user: users.values()) {

@@ -50,6 +50,9 @@ public class LoginMenu {
         do {
             output.print(display.loginPageMessage());
             output.print(display.insertLoginMessage());
+            if(input.hasNext("quit")){
+                System.exit(-1);
+            }
             if(input.hasNext("\\d{3}-\\d{4}")){
                 String username = input.nextLine();
                 output.print(display.insertPasswordMessage());

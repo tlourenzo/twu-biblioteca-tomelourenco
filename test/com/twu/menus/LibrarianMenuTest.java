@@ -12,7 +12,6 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
 
@@ -29,8 +28,6 @@ public class LibrarianMenuTest {
         inventory = new MockInventory();
         loggedUser = new User("000-0000", "1234","Test Librarian","Test@Email", "0000000");
         librarianMenu = new LibrarianMenu();
-
-
     }
 
 

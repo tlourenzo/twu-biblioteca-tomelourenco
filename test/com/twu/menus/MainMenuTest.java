@@ -76,6 +76,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Book Inventory of our Biblioteca:\n" +
@@ -92,6 +93,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -104,6 +106,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -116,6 +119,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -139,6 +143,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Please select a valid option.\n" +
@@ -149,6 +154,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca", output);
@@ -185,6 +191,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Book Inventory of our Biblioteca:\n" +
@@ -201,6 +208,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -231,6 +239,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -243,6 +252,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -272,6 +282,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "\n" +
@@ -284,6 +295,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);
@@ -307,6 +319,7 @@ public class MainMenuTest {
                 "3 - Return Book\n" +
                 "4 - Checkout Movie\n" +
                 "5 - Return Movie\n" +
+                "6 - Your User Details\n" +
                 "0 - Logout\n" +
                 "Select your request by using the corresponding number:\n" +
                 "Thank you for using our automatic checkout system. Best Regards, Bangalore Biblioteca",output);

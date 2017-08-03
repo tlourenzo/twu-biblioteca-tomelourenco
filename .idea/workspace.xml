@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf699c5-aa32-4320-b645-fe7fed9f4769" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/twu/menus/UserMenuTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/menus/LoginMenu.java" afterPath="$PROJECT_DIR$/src/com/twu/menus/LoginMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/menus/MainMenuTest.java" afterPath="$PROJECT_DIR$/test/com/twu/menus/MainMenuTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,46 +16,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CheckoutMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/twu/menus/CheckoutMenu.java">
+      <file leaf-file-name="LoginMenu.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/menus/LoginMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="38" column="147" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="147" />
+            <state relative-caret-position="1063">
+              <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckoutMenuTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/menus/CheckoutMenuTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="61" column="30" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="61" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/twu/menus/UserMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMenuTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/menus/UserMenuTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -97,12 +64,12 @@
         <option value="$PROJECT_DIR$/test/com/twu/user/UserTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/database/Inventory.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/menus/LoginMenu.java" />
         <option value="$PROJECT_DIR$/src/com/twu/menus/MainMenu.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/menus/MainMenuTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/utilities/DisplayMessages.java" />
         <option value="$PROJECT_DIR$/src/com/twu/menus/UserMenu.java" />
         <option value="$PROJECT_DIR$/test/com/twu/menus/UserMenuTest.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/menus/MainMenuTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/menus/LoginMenu.java" />
       </list>
     </option>
   </component>
@@ -165,20 +132,6 @@
             <path>
               <item name="twu-biblioteca-tomelourenco" type="b2602c69:ProjectViewProjectNode" />
               <item name="twu-biblioteca-tomelourenco" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="twu" type="462c0819:PsiDirectoryNode" />
-              <item name="menus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twu-biblioteca-tomelourenco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twu-biblioteca-tomelourenco" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="twu" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twu-biblioteca-tomelourenco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twu-biblioteca-tomelourenco" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,13 +139,6 @@
               <item name="twu-biblioteca-tomelourenco" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="twu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twu-biblioteca-tomelourenco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twu-biblioteca-tomelourenco" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="twu" type="462c0819:PsiDirectoryNode" />
-              <item name="menus" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMenuTest.testCheckoutMenuInit">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration name="All in twu-biblioteca-tomelourenco" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="twu-biblioteca-tomelourenco" />
@@ -425,9 +371,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserMenuTest.testCheckoutMenuInit" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in twu-biblioteca-tomelourenco" />
+        <item index="0" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in twu-biblioteca-tomelourenco" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserMenuTest.testCheckoutMenuInit" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.userListCreation" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.testUserName" />
       </list>
@@ -445,7 +391,7 @@
       <updated>1501719233281</updated>
       <workItem from="1501719234564" duration="79000" />
       <workItem from="1501753349377" duration="4951000" />
-      <workItem from="1501765543295" duration="11359000" />
+      <workItem from="1501765543295" duration="11639000" />
     </task>
     <servers />
   </component>
@@ -453,8 +399,14 @@
     <history-entry file="All_in_twu-biblioteca-tomelourenco - 2017.08.03 at 16h 56m 06s.xml">
       <configuration name="All in twu-biblioteca-tomelourenco" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginMenuTest_testLoginMenuInit - 2017.08.03 at 16h 46m 40s.xml">
-      <configuration name="LoginMenuTest.testLoginMenuInit" configurationId="JUnit" />
+    <history-entry file="All_in_twu-biblioteca-tomelourenco - 2017.08.03 at 17h 40m 35s.xml">
+      <configuration name="All in twu-biblioteca-tomelourenco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-tomelourenco - 2017.08.03 at 17h 42m 22s.xml">
+      <configuration name="All in twu-biblioteca-tomelourenco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-tomelourenco - 2017.08.03 at 17h 42m 41s.xml">
+      <configuration name="All in twu-biblioteca-tomelourenco" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserMenuTest_testCheckoutMenuInit - 2017.08.03 at 17h 37m 24s.xml">
       <configuration name="UserMenuTest.testCheckoutMenuInit" configurationId="JUnit" />
@@ -468,21 +420,15 @@
     <history-entry file="UserMenuTest_testCheckoutMenuInit - 2017.08.03 at 17h 39m 23s.xml">
       <configuration name="UserMenuTest.testCheckoutMenuInit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_areTwoUsersEquals - 2017.08.03 at 16h 54m 39s.xml">
-      <configuration name="UserTest.areTwoUsersEquals" configurationId="JUnit" />
+    <history-entry file="UserMenuTest_testCheckoutMenuInit - 2017.08.03 at 17h 39m 44s.xml">
+      <configuration name="UserMenuTest.testCheckoutMenuInit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testUserName - 2017.08.03 at 16h 54m 45s.xml">
-      <configuration name="UserTest.testUserName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserTest_userListCreation - 2017.08.03 at 16h 55m 41s.xml">
-      <configuration name="UserTest.userListCreation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserTest_userListCreation - 2017.08.03 at 16h 55m 58s.xml">
-      <configuration name="UserTest.userListCreation" configurationId="JUnit" />
+    <history-entry file="UserMenuTest_testCheckoutMenuInit - 2017.08.03 at 17h 40m 30s.xml">
+      <configuration name="UserMenuTest.testCheckoutMenuInit" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16389000" />
+    <option name="totallyTimeSpent" value="16669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -496,7 +442,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36335722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9222109" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -758,26 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/menus/LoginMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="83" column="34" lean-forward="true" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/menus/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/menus/MainMenuTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="298" column="112" lean-forward="false" selection-start-line="298" selection-start-column="112" selection-end-line="298" selection-end-column="112" />
           <folding />
         </state>
       </provider>
@@ -823,11 +753,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/menus/UserMenuTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
+        <state relative-caret-position="765">
           <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/menus/MainMenuTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4365">
+          <caret line="321" column="43" lean-forward="false" selection-start-line="321" selection-start-column="43" selection-end-line="321" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/menus/LoginMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1063">
+          <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

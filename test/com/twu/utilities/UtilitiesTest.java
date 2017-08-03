@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Tome Lourenco
- * v.1.0
+ * v.2.0
  */
 public class UtilitiesTest {
 

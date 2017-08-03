@@ -22,11 +22,11 @@ public class UsersDB {
 
     private void createUserdatabase() {
         users = new HashMap<String, User>();
-        users.put("111-1111",new User("111-1111", "123456", "Awesome User 1", "user1@email.com", "99999999"));
-        users.put("222-2222",new User("222-2222", "123456", "Awesome User 2", "user2@email.com", "99999999"));
-        users.put("333-3333",new User("333-3333", "123456", "Awesome User 3", "user3@email.com", "99999999"));
-        users.put("444-4444",new User("444-4444", "123456", "Awesome User 4", "user4@email.com", "99999999"));
-        users.put("000-0000",new User("000-0000", "123456", "Librarian", "librarian@email.com", "99999999"));
+        users.put("111-1111",new User("111-1111", "1234", "Awesome User 1", "user1@email.com", "99999999"));
+        users.put("222-2222",new User("222-2222", "1234", "Awesome User 2", "user2@email.com", "99999999"));
+        users.put("333-3333",new User("333-3333", "1234", "Awesome User 3", "user3@email.com", "99999999"));
+        users.put("444-4444",new User("444-4444", "1234", "Awesome User 4", "user4@email.com", "99999999"));
+        users.put("000-0000",new User("000-0000", "1234", "Librarian", "librarian@email.com", "99999999"));
     }
 
     public User getUserByID(String ID){

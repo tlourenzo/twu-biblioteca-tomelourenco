@@ -40,7 +40,7 @@ public class Utilities {
 
         for (Movie movie : movieList) {
             index++;
-            formattedMovieList += String.format("%-15d %-15s %-15s %-15d\n", index, movie.getMovieName(), movie.getDirector(), movie.getYear(), movie.getRating());
+            formattedMovieList += String.format("%-15d %-15s %-15s %-15d %-15s\n", index, movie.getMovieName(), movie.getDirector(), movie.getYear(), movie.getRating());
         }
         return formattedMovieList;
     }

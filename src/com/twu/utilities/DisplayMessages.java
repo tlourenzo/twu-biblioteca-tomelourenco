@@ -31,7 +31,7 @@ public final class DisplayMessages {
 
     public String mainMenuMessage(){
         return "Available options:\n"+
-                "1 - List available books in database\n"+
+                "1 - List available items in database\n"+
                 "2 - Checkout Book\n"+
                 "3 - Return Book\n"+
                 "4 - Checkout Movie\n"+
@@ -60,7 +60,7 @@ public final class DisplayMessages {
     }
 
     public String movieListingMessage(){
-        return String.format("%-15s %-15s %-15s %-15d %-15s\n", "Movie ID", "Name", "Director", "Year", "Rating");
+        return String.format("%-15s %-15s %-15s %-15s %-15s\n", "Movie ID", "Name", "Director", "Year", "Rating");
     }
 
     public String librarianListingMessage(){

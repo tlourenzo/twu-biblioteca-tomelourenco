@@ -86,6 +86,10 @@ public class MainMenu {
                 output.print(display.allBooksListTitle());
                 output.print(display.bookListingMessage());
                 output.print(Utilities.displayFormattedBookList(inventory.getAvailableBooksList()));
+
+                output.print(display.allMoviesListTitle());
+                output.print(display.movieListingMessage());
+                output.print(Utilities.displayFormattedMovieList(inventory.getAvailableMoviesList()));
                 break;
             case 2:
                 if(inventory.getAvailableBooksList().isEmpty()){
@@ -98,17 +102,16 @@ public class MainMenu {
                 if(inventory.getCheckedOutBooksList().isEmpty()){
                     output.print(display.incorrectBookReturnMessage());
                 }else{
-                    returnMenu.run("movie", inventory, display, input, output, loggedUser);
+                    returnMenu.run("book", inventory, display, input, output, loggedUser);
                 }
                 break;
             case 4:
                 if(inventory.getAvailableMoviesList().isEmpty()){
-                    output.print(display.incorrectBookCheckoutMessage());
+                    output.print(display.incorrectMovieCheckoutMessage());
                 }else{
                     checkoutMenu.run("movie",inventory, display, input, output, loggedUser);
                 }
                 break;
-
             case 5:
                 if(inventory.getCheckedOutMoviesList().isEmpty()){
                     output.print(display.incorrectMovieReturnMessage());

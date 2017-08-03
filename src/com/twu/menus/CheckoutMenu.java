@@ -7,6 +7,7 @@ package com.twu.menus;
 
 import com.twu.book.Book;
 import com.twu.database.Inventory;
+import com.twu.movie.Movie;
 import com.twu.user.User;
 import com.twu.utilities.DisplayMessages;
 import com.twu.utilities.Utilities;
@@ -49,10 +50,6 @@ public class CheckoutMenu {
         }
     }
 
-    private void startCheckoutMovie() {
-
-    }
-
 
     /**
      * Aux method to display the right messages and to receive user choice upon the presented list.
@@ -74,6 +71,19 @@ public class CheckoutMenu {
 
     }
 
+    private void startCheckoutMovie() {
+        output.print(display.availableMoviesListTitle());
+        output.print(display.movieListingMessage());
+        output.print(Utilities.displayFormattedMovieList(inventory.getAvailableMoviesList()));
+        output.print(display.checkoutMovieMessage());
+        if(input.hasNext("\\d+")){
+            checkoutMovieMenuOption(input.nextInt());
+        }else{
+            output.print(display.incorrectInputMessage());
+            input.nextLine();
+            startCheckoutMovie();
+        }
+    }
 
     /**
      * Receiving a right option, this method will invoke the checkout method from the database.
@@ -97,5 +107,24 @@ public class CheckoutMenu {
         }
 
     }
+
+    private void checkoutMovieMenuOption(int selectOption) {
+        if(selectOption == 0){
+            return;
+        }
+        else{
+            if(selectOption >0 && selectOption<=inventory.getAvailableMoviesList().size()){
+                Movie movieToCheckout = inventory.getAvailableMoviesList().get(selectOption-1);
+                inventory.checkoutMovie(movieToCheckout, loggedUser);
+                output.print(display.successMovieCheckoutMessage() + " " + movieToCheckout.getMovieName() + " by " + movieToCheckout.getDirector()+ "\n\n");
+                return;
+            }
+            else{
+                output.print(display.incorrectInputMessage());
+                startCheckoutMovie();
+            }
+        }
+    }
+
 
 }

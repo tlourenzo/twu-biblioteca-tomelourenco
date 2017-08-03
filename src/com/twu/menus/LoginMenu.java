@@ -84,6 +84,7 @@ public class LoginMenu {
             }
 
         }catch(Exception e){
+            e.printStackTrace();
             output.print(display.userNotFoundMessage());
         }
     }

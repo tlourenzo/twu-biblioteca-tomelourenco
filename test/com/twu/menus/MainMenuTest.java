@@ -34,6 +34,7 @@ public class MainMenuTest {
     private CheckoutMenu checkoutMenu;
     private ReturnMenu returnMenu;
     private User mockLoggedUser;
+    private UserMenu userMenu;
 
     @Before
     public void setUp() throws UnsupportedEncodingException {
@@ -43,6 +44,7 @@ public class MainMenuTest {
         checkoutMenu = new MockCheckoutMenu();
         returnMenu = new MockReturnMenu();
         mockLoggedUser= new User("123-1234", "1234","Test User","Test@Email", "0000000");
+        userMenu = new UserMenu();
     }
 
     @Test
@@ -63,7 +65,7 @@ public class MainMenuTest {
                 printStream.print("\n\nReturn Menu Called\n\n");
             }
         };
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser, userMenu);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
@@ -126,7 +128,7 @@ public class MainMenuTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser, userMenu);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
@@ -160,7 +162,7 @@ public class MainMenuTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser, userMenu);
         String output = baos.toString();
 
         assertTrue(output.contains("Please select a valid option."));
@@ -172,7 +174,7 @@ public class MainMenuTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu,mockLoggedUser,userMenu);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
@@ -218,7 +220,7 @@ public class MainMenuTest {
             }
         };
 
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser, userMenu);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
@@ -259,7 +261,7 @@ public class MainMenuTest {
                 printStream.print("\n\nReturn Menu Called\n\n");
             }
         };
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser, userMenu);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +
@@ -294,7 +296,7 @@ public class MainMenuTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         final PrintStream printStream = new PrintStream(baos);
 
-        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser);
+        mainMenu.run(inventory,inputStream,printStream,display,checkoutMenu,returnMenu, mockLoggedUser, userMenu);
         String output = baos.toString();
 
         assertEquals("Welcome to Bangalore Biblioteca Test User\n" +

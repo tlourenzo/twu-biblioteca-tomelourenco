@@ -166,6 +166,39 @@ public class Inventory {
     }
 
 
+    /**
+     *
+     * Given a certain user, it returns a list of all books checkout by it
+     * @param user
+     * @return
+     */
+    public List getCheckedOutBooksListByUser(User user) {
+        List<Book> queryResult = new ArrayList<>();
+        if(!getAvailableBooksList().isEmpty()){
+            for(Book book : getCheckedOutBooksList()){
+                if(book.getUserHoldingBook().equals(user)){
+                    queryResult.add(book);
+                }
+            }
+        }
+        return queryResult;
+    }
 
-
+    /**
+     *
+     * Given a certain user, it returns a list of all movies checkout by it
+     * @param user
+     * @return
+     */
+    public List getCheckedOutMoviesListByUser(User user) {
+        List<Movie> queryResult = new ArrayList<>();
+        if(!getAvailableBooksList().isEmpty()){
+            for(Movie movie : getCheckedOutMoviesList()){
+                if(movie.getUserHoldingMovie().equals(user)){
+                    queryResult.add(movie);
+                }
+            }
+        }
+        return queryResult;
+    }
 }

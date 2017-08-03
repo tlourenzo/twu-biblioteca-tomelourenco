@@ -28,8 +28,9 @@ public class LoginMenu {
     private CheckoutMenu checkoutMenu;
     private ReturnMenu returnMenu;
     private Inventory inventory;
+    private UserMenu userMenu;
 
-    public void run(UsersDB usersDB, InputStream input, PrintStream output, DisplayMessages display, LibrarianMenu librarianMenu, MainMenu mainmenu, CheckoutMenu checkoutMenu, ReturnMenu returnMenu, Inventory inventory) {
+    public void run(UsersDB usersDB, InputStream input, PrintStream output, DisplayMessages display, LibrarianMenu librarianMenu, MainMenu mainmenu, CheckoutMenu checkoutMenu, ReturnMenu returnMenu, Inventory inventory, UserMenu userMenu) {
 
         this.usersDB = usersDB;
         this.input = new Scanner(input);
@@ -40,6 +41,7 @@ public class LoginMenu {
         this.checkoutMenu = checkoutMenu;
         this.returnMenu = returnMenu;
         this.inventory = inventory;
+        this.userMenu = userMenu;
         start();
     }
 
@@ -79,7 +81,7 @@ public class LoginMenu {
                     if(user.getUsername().equals("000-0000")){
                         librarianMenu.run(inventory,System.in, System.out, display, user);
                     }else{
-                        mainmenu.run(inventory, System.in, System.out, display, checkoutMenu, returnMenu, user);
+                        mainmenu.run(inventory, System.in, System.out, display, checkoutMenu, returnMenu, user, userMenu);
                     }
                 }else{
                     output.print(display.wrongPasswordMessage());

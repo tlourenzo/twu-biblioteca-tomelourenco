@@ -36,6 +36,7 @@ public final class DisplayMessages {
                 "3 - Return Book\n"+
                 "4 - Checkout Movie\n"+
                 "5 - Return Movie\n"+
+                "6 - Your User Details\n"+
                 "0 - Logout\n";
     }
 
@@ -168,5 +169,13 @@ public final class DisplayMessages {
 
     public String librarianLogoutMessage() {
         return "\nPlease press 0 to exit.\n";
+    }
+
+    public String userDetailsWelcomeMessage() {
+        return "\nUser details List\n\n";
+    }
+
+    public String userListsMessage() {
+        return "\nCurrent checked out items: \n\n";
     }
 }

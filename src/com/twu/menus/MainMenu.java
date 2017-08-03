@@ -27,6 +27,7 @@ public class MainMenu {
     private CheckoutMenu checkoutMenu;
     private ReturnMenu returnMenu;
     private User loggedUser;
+    private UserMenu userMenu;
     private DisplayMessages display;
     private boolean exit;
 
@@ -43,7 +44,7 @@ public class MainMenu {
      * @param returnMenu
      */
     public void run(Inventory inventory, InputStream inputStream, PrintStream outputStream,
-                    DisplayMessages displayMessages, CheckoutMenu checkoutMenu, ReturnMenu returnMenu, User loggedUser) {
+                    DisplayMessages displayMessages, CheckoutMenu checkoutMenu, ReturnMenu returnMenu, User loggedUser, UserMenu userMenu) {
         this.inventory = inventory;
         this.input = new Scanner(inputStream);
         this.output = outputStream;
@@ -51,6 +52,7 @@ public class MainMenu {
         this.checkoutMenu = checkoutMenu;
         this.returnMenu = returnMenu;
         this.loggedUser = loggedUser;
+        this.userMenu = userMenu;
         start();
     }
 
@@ -119,6 +121,11 @@ public class MainMenu {
                     returnMenu.run("movie",inventory, display, input, output, loggedUser);
                 }
                 break;
+            case 6:
+            {
+                userMenu.run(inventory, input, output, display, loggedUser);
+            }
+            break;
             case 0:
                 output.print(display.exitMessage());
                 exit = true;

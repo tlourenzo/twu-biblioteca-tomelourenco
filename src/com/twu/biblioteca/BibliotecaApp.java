@@ -24,8 +24,9 @@ public class BibliotecaApp {
         ReturnMenu returnMenu = new ReturnMenu();
         LoginMenu login = new LoginMenu();
         UsersDB usersDB = new UsersDB();
+        UserMenu userMenu = new UserMenu();
         DisplayMessages displayMessages = DisplayMessages.getInstance();
 
-        login.run(usersDB, System.in, System.out, displayMessages,librarianMenu, mainMenu, checkoutMenu, returnMenu, inventory);
+        login.run(usersDB, System.in, System.out, displayMessages,librarianMenu, mainMenu, checkoutMenu, returnMenu, inventory, userMenu);
     }
 }
